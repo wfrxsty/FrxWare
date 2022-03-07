@@ -1,6 +1,6 @@
 --// Premium User //--
 
-local user_premium__001 = game.Players.wfrxsry --// Replace "User101" with your username (NOT DISPLAY) //--
+local user_premium__001 = game.Players.wfrxsty --// Replace "User101" with your username (NOT DISPLAY) //--
 
 -----------------------------------------------------------------------
 -----------------------------------------------------------------------
