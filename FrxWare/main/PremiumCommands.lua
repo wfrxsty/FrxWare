@@ -88,6 +88,9 @@ user_premium__001.Chatted:connect(function(cht)
 			game.Workspace:FindFirstChildWhichIsA('Camera').CameraSubject = user_premium__001.Character.HumanoidRootPart
 			local benxed = true
 			while benxed == true do
+				local Crouch = player.Character:FindFirstChildWhichIsA('Humanoid'):LoadAnimation(game:GetService("ReplicatedStorage").ClientAnimations.Crouching)
+				Crouch.Looped = true
+				Crouch:Play()
 				hummy = game:GetService("Players").LocalPlayer.Character.Humanoid
 				pcall(function()
     					hummy.Parent.Pants:Destroy()
