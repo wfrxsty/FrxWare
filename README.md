@@ -38,7 +38,7 @@ Commands :
 -fling all frxware user
 ```
 
-##Licence
+## Licence
 
 You can use the frxware© code as long as you credit it, any code from frxware© non credited could get taken down.
 frxware© is free for everyone, if you paid for it, please report the seller [here](discord.com).
