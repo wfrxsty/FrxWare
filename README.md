@@ -16,9 +16,6 @@ Commands :
 :bring .
 -bring all frxware user to you
 
-:benx .
--bend all frxware user
-
 :grave . 
 -put all frxware user underground
 
