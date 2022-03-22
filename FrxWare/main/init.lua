@@ -559,8 +559,6 @@ Misc:NewButton("Pro animation", "Animation", function()
     end
 end)
 
-end)
-end)
 
 
 
@@ -573,4 +571,6 @@ end)
 
 
 
----Made by kolo.jr#0795
+
+
+---Made by ぷ frxsty#9100
