@@ -10,7 +10,7 @@ local Window = Library.CreateLib("|FrxWare|")
 local Aimlock = Window:NewTab("Aimlock")
 local Silent = Window:NewTab("Silent Aim")
 local SilentAimlock = Window:NewTab("Silent Aimlock")
-local Visuals = Window:NewTab("Visuals")
+local MiscTab = FrxWare:NewTab("Misc")
 local UISettings = Window:NewTab("GUI Settings")
 --Tabs are finished <3
 local Section = Aimlock:NewSection("Aimlock Section")
@@ -281,7 +281,7 @@ end)
 local Section = SilentAimlock:NewSection("Silent Aimlock")
 
 Section:NewButton("Silent Aimlock", "Enable", function()
-    NotifyLib.prompt('|FrxWare|', '' )
+    NotifyLib.prompt('|FrxWare|', 'Silent aimlock has been enable!' )
 
 --[[
 
@@ -533,7 +533,16 @@ Section:NewToggle("Chat Mode", "Chats Mode Silent Lock", function(txt)
     
     
 
-local MiscTab = FrxWare:NewTab("Misc")
+Misc:NewButton("teleportation", "teleportation", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/wfrxsty/FrxWare/main/FrxWare/main/insidescript/fly"))()
+    NotifyLib.prompt('|FrxWare|', 'Click your x button!' )
+end)
+
+Misc:NewButton("teleportation", "teleportation", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/wfrxsty/FrxWare/main/FrxWare/main/insidescript/tp"))()
+    NotifyLib.prompt('|FrxWare|', 'Click your c button!' )
+end)
+
 local Misc = MiscTab:NewSection("Misc")
 Misc:NewButton("animation pack", "free animation pack", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/wfrxsty/FrxWare/main/FrxWare/main/insidescript/AnimPack"))()
@@ -543,6 +552,7 @@ Misc:NewButton("kroblox", "kroblox", function()
 end)
 Misc:NewButton("trashTalk", "The key is 'y' !", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/wfrxsty/FrxWare/main/FrxWare/main/insidescript/trashTalk"))()
+    NotifyLib.prompt('|FrxWare|', 'Click your y button!' )
 end)
 Misc:NewButton("Pro animation", "Animation", function()
     while true do
