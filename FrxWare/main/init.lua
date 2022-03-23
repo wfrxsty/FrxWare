@@ -10,7 +10,7 @@ local Window = Library.CreateLib("|FrxWare|")
 local Aimlock = Window:NewTab("Aimlock")
 local Silent = Window:NewTab("Silent Aim")
 local SilentAimlock = Window:NewTab("Silent Aimlock")
-local MiscTab = FrxWare:NewTab("Misc")
+local MiscTab = Window:NewTab("Misc")
 local UISettings = Window:NewTab("GUI Settings")
 --Tabs are finished <3
 local Section = Aimlock:NewSection("Aimlock Section")
@@ -533,7 +533,11 @@ Section:NewToggle("Chat Mode", "Chats Mode Silent Lock", function(txt)
     
     
 
-Misc:NewButton("teleportation", "teleportation", function()
+
+
+local Misc = MiscTab:NewSection("Misc")
+
+Misc:NewButton("Fly", "fly", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/wfrxsty/FrxWare/main/FrxWare/main/insidescript/fly"))()
     NotifyLib.prompt('|FrxWare|', 'Click your x button!' )
 end)
@@ -543,7 +547,6 @@ Misc:NewButton("teleportation", "teleportation", function()
     NotifyLib.prompt('|FrxWare|', 'Click your c button!' )
 end)
 
-local Misc = MiscTab:NewSection("Misc")
 Misc:NewButton("animation pack", "free animation pack", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/wfrxsty/FrxWare/main/FrxWare/main/insidescript/AnimPack"))()
 end)
