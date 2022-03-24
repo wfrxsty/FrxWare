@@ -368,29 +368,19 @@ end)
         local A_1 = "Target: "..tostring(Plr.Character.Humanoid.DisplayName) local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
         	end	
                if getgenv().NotifMode then
-    			game.StarterGui:SetCore("SendNotification", {
-        Title = "|FrxWare|";
-        Text = "Target: "..tostring(Plr.Character.Humanoid.DisplayName);
+    			NotifyLib.prompt('|FrxWare|', "Target: "..tostring(Plr.Character.Humanoid.DisplayName), 2)
     
-    })
+    
     end
     elseif not Locking then
          if getgenv().ChatMode then
         local A_1 = "Unlocked!" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
         	end	
         if getgenv().NotifMode then
-                        game.StarterGui:SetCore("SendNotification", {
-                   Title = "|FrxWare|",
-                   Text = "Unlocked",
-                   Duration = 5
-               })
+                        NotifyLib.prompt('|FrxWare|', "Unlocked!", 2)
+
            elseif getgenv().Target == false then
-                        game.StarterGui:SetCore("SendNotification", {
-                   Title = "|FrxWare|",
-                   Text = "Target isn't enabled",
-                   Duration = 5
-     
-                   })
+                        NotifyLib.prompt('|FrxWare|', "Error", 2)
                
                end
                   
