@@ -1,4 +1,5 @@
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/wfrxsty/FrxWare/main/FrxWare/main/console.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local NotifyLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/BoredStuff2/notify-lib/main/lib"))()
 NotifyLib.prompt('|FrxWare|', 'Loading..', 5)
