@@ -562,6 +562,12 @@ Misc:NewButton("Pro animation", "Animation", function()
         wait(1)
     end
 end)
+1
+Misc:NewSlider("cframe walkspeed", "can be use as a anti lock lol", 5, 1, function(s) -- 500 (MaxValue) | 0 (MinValue)
+     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.Humanoid.MoveDirection * s
+end)
+
+
 
 
 
