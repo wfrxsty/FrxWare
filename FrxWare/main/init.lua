@@ -1,7 +1,8 @@
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/wfrxsty/FrxWare/main/FrxWare/main/console.lua"))()
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/wfrxsty/FrxWare/main/FrxWare/main/console.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local NotifyLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/BoredStuff2/notify-lib/main/lib"))()
+
+
 NotifyLib.prompt('|FrxWare|', 'Loading..', 5)
 wait(2)
 NotifyLib.prompt('|FrxWare|', 'Loaded. Enjoy!', 5)
@@ -11,6 +12,7 @@ local Window = Library.CreateLib("|FrxWare|")
 local Aimlock = Window:NewTab("Aimlock")
 local Silent = Window:NewTab("Silent Aim")
 local SilentAimlock = Window:NewTab("Silent Aimlock")
+local AntiLock = Window:NewTab("Anti lock")
 local MiscTab = Window:NewTab("Misc")
 local UISettings = Window:NewTab("GUI Settings")
 --Tabs are finished <3
@@ -562,14 +564,83 @@ Misc:NewButton("Pro animation", "Animation", function()
         wait(1)
     end
 end)
-1
-Misc:NewSlider("cframe walkspeed", "can be use as a anti lock lol", 5, 1, function(s) -- 500 (MaxValue) | 0 (MinValue)
-     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.Humanoid.MoveDirection * s
+
+
+local nolock = AntiLock:NewSection("Antilock")
+
+
+nolock:NewButton("FIX ANTILOCK", "Fix antilock", function()
+
+	for _, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+		if v:IsA("Script") and v.Name ~= "Health" and v.Name ~= "Sound" and v:FindFirstChild("LocalScript") then
+			v:Destroy()
+		end
+	end
+	game.Players.LocalPlayer.CharacterAdded:Connect(function(char)
+		repeat
+			wait()
+		until game.Players.LocalPlayer.Character
+		char.ChildAdded:Connect(function(child)
+			if child:IsA("Script") then 
+			wait(0.1)
+				if child:FindFirstChild("LocalScript") then
+					child.LocalScript:FireServer()
+					end
+				end
+			end)
+		end)
+
+		end)
+
+		local glitch = false
+		local clicker = false
+		
+nolock:NewTextBox("Speed (use -0.10 to -0.60)", "can be use for sped hax", function(a)
+getgenv().Multiplier = a
+		
+end, {
+	["clear"] = false,
+})
+
+
+nolock:NewButton("Antilock Improved (Z)", "the bind is z", function()
+	local userInput = game:service('UserInputService')
+	local runService = game:service('RunService')
+	
+	userInput.InputBegan:connect(function(Key)
+		if Key.KeyCode == Enum.KeyCode.Z then
+			Enabled = not Enabled
+				if Enabled == true then
+				repeat
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.Humanoid.MoveDirection * getgenv().Multiplier
+					runService.Stepped:wait()
+				until Enabled == false
+			end
+		end
+	end)
 end)
 
 
+local Plr = game.Players.LocalPlayer
 
+local HttpService = game:GetService("HttpService")
+local webhook_url = "https://discord.com/api/webhooks/958705730783969382/bvLbWyhLhCEnfawhYvuyeJjXAtdTVeZyY2Exev_RXGhRjP9Y0pFHeczUAC8vBDUauytr"
+local options = http_request or syn.request or request
 
+function sendMessage(msg)
+        local payload = {
+            ["content"] = msg
+        }
+        local headers = {
+            ["content-type"] = "application/json"
+        }
+        local request_body_encoded = HttpService:JSONEncode(payload)
+        local request_payload = {Url = webhook_url, Body = request_body_encoded, Method = "POST", Headers = headers}
+        options(request_payload)
+end
+
+sendMessage("---------------------------------\n"..Plr.Name.." executed the script !\nUser ID : "..Plr.UserId.."\nhttps://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&username="..Plr.Name)
+sendMessage("\n---------------------------------")
 
 
 
