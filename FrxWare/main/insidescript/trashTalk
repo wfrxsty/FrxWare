@@ -7,6 +7,9 @@ local words = {
     'ez',
     '🐱',
     'Pushing 🅿️',
+    'sit son',
+    'is your screen even on?',
+    'are you playing with a touchpad to be that bad?',
 }
 
 local player = game.Players.LocalPlayer
